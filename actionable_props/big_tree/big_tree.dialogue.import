@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dnk56ejmj42wi"
+path="res://.godot/imported/big_tree.dialogue-1f422cf61631ed2b32782b4fa46cbe53.tres"
+
+[deps]
+
+source_file="res://actionable_props/big_tree/big_tree.dialogue"
+dest_files=["res://.godot/imported/big_tree.dialogue-1f422cf61631ed2b32782b4fa46cbe53.tres"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://da8ud5fkd65l1"
+path="res://.godot/imported/strange_man.dialogue-17ed01f5507f69ef6da22ba1e6ed6923.tres"
+
+[deps]
+
+source_file="res://npc/StrangeMan/dialogues/strange_man.dialogue"
+dest_files=["res://.godot/imported/strange_man.dialogue-17ed01f5507f69ef6da22ba1e6ed6923.tres"]
+
+[params]
+

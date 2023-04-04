@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://o0u7j3j1nd6e"]
+
+[ext_resource type="Script" path="res://actionable_props/skull/skull.gd" id="1_lcpvc"]
+[ext_resource type="Texture2D" uid="uid://pvglyds7joab" path="res://actionable_props/skull/broken_skull.png" id="1_owi6a"]
+[ext_resource type="Texture2D" uid="uid://yy2ys0ceihx8" path="res://actionable_props/skull/skull.png" id="2_uk006"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgnk7"]
+size = Vector2(6, 2)
+
+[node name="Skull" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_lcpvc")
+
+[node name="BrokenSkull" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-1, 0)
+texture = ExtResource("1_owi6a")
+
+[node name="Skull" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+texture = ExtResource("2_uk006")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_cgnk7")

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://cun8xastafhno"
+path="res://.godot/imported/small_rock.dialogue-3091734dc95f468ecbae50482deb44ed.tres"
+
+[deps]
+
+source_file="res://actionable_props/small_rock/small_rock.dialogue"
+dest_files=["res://.godot/imported/small_rock.dialogue-3091734dc95f468ecbae50482deb44ed.tres"]
+
+[params]
+

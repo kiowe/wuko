@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqiv2rlohgtwr"]
+
+[ext_resource type="Texture2D" uid="uid://dbaplsp30f6pf" path="res://npc/StrangeMan/strange_man.png" id="1_a4d40"]
+[ext_resource type="Script" path="res://npc/StrangeMan/npc_strange_man.gd" id="1_jl33m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dc5py"]
+
+[node name="npc_StrangeMan" type="StaticBody2D"]
+script = ExtResource("1_jl33m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_a4d40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_dc5py")

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b0jstm4lyi60n"
+path="res://.godot/imported/mid_tree.dialogue-957db9c04b027181ec5d03843aa4a027.tres"
+
+[deps]
+
+source_file="res://actionable_props/mid_tree/mid_tree.dialogue"
+dest_files=["res://.godot/imported/mid_tree.dialogue-957db9c04b027181ec5d03843aa4a027.tres"]
+
+[params]
+

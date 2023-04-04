@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dtxfurfvtk4kt"
+path="res://.godot/imported/skull.dialogue-45ed8d088241cce55073674c3ca7191f.tres"
+
+[deps]
+
+source_file="res://actionable_props/skull/skull.dialogue"
+dest_files=["res://.godot/imported/skull.dialogue-45ed8d088241cce55073674c3ca7191f.tres"]
+
+[params]
+

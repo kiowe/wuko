@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ri6c2l8nwluy"]
+
+[ext_resource type="AudioStream" uid="uid://6vwtkdk5jh87" path="res://resources/audio/music/Patreon Goal Reward Loops - Track 01.wav" id="1_mxodx"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_mxodx")
+autoplay = true
+bus = &"Music"

@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b5hx63672t73h"
+path="res://.godot/imported/big_rock.dialogue-66eb522ea4a9390b2e52cc99a0a115ea.tres"
+
+[deps]
+
+source_file="res://actionable_props/big_rock/big_rock.dialogue"
+dest_files=["res://.godot/imported/big_rock.dialogue-66eb522ea4a9390b2e52cc99a0a115ea.tres"]
+
+[params]
+

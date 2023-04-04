@@ -1,0 +1,11 @@
+~ mid_dead_tree
+
+set dialogue_is_going = true
+
+Это такое же дерево, как то с листвой.
+Но оно умерло.
+Ему явно не хватало заботы.
+
+set dialogue_is_going = false
+
+=> END

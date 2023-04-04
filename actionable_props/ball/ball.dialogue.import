@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://b4g7ifov25kj5"
+path="res://.godot/imported/ball.dialogue-f188397d5d4f2c4583006fb5d768c7f7.tres"
+
+[deps]
+
+source_file="res://actionable_props/ball/ball.dialogue"
+dest_files=["res://.godot/imported/ball.dialogue-f188397d5d4f2c4583006fb5d768c7f7.tres"]
+
+[params]
+

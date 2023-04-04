@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://hmcyomic87yl"
+path="res://.godot/imported/unknown.dialogue-0f9f107644d20ab637fd4c538dcf6b3f.tres"
+
+[deps]
+
+source_file="res://npc/Unknown/dialogues/unknown.dialogue"
+dest_files=["res://.godot/imported/unknown.dialogue-0f9f107644d20ab637fd4c538dcf6b3f.tres"]
+
+[params]
+

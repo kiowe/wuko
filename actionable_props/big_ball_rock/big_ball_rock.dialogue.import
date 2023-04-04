@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://d3ebej0ldhbqr"
+path="res://.godot/imported/big_ball_rock.dialogue-8c0ef811ef25d113e295f14d700d706d.tres"
+
+[deps]
+
+source_file="res://actionable_props/big_ball_rock/big_ball_rock.dialogue"
+dest_files=["res://.godot/imported/big_ball_rock.dialogue-8c0ef811ef25d113e295f14d700d706d.tres"]
+
+[params]
+

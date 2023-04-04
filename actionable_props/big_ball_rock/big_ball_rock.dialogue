@@ -1,0 +1,11 @@
+~ big_ball_rock
+
+set dialogue_is_going = true
+
+Вы видите перед собой огромный шар из камня.
+Вы решаете поиграть им в футболл.
+Теперь нога Вуко сильно болит.
+
+set dialogue_is_going = false
+
+=> END
