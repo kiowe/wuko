@@ -2,9 +2,9 @@
 
 set dialogue_is_going = true
 
-Вы видите перед собой огромный шар из камня.
-Вы решаете поиграть им в футболл.
-Теперь нога Вуко сильно болит.
+You see a huge ball of stone in front of you.
+You decide to kick it like a soccer ball.
+Now Wuko's leg hurts a lot.
 
 set dialogue_is_going = false
 

@@ -1,0 +1,6 @@
+res://resources/dialogue_balloon/small_balloon.tscn
+res://scenes/test_room.tscn
+res://scenes/main_menu.tscn
+res://scenes/info_room.tscn
+res://player/player.tscn
+res://helpers/actionable.tscn

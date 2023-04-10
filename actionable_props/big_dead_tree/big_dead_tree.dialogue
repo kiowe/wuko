@@ -2,10 +2,10 @@
 
 set dialogue_is_going = true
 
-Вы смотрите на большое умершее дерево.
-"Видимо он устал, почему он всё ещё стоит?" - говорит Вуко.
-Если вы пытаетесь ответить на его вопрос, то не стоит пытаться.
-Он вас не слышит.
+You are looking at a large dead tree.
+"Apparently he's tired, why is he still standing?" - says Wuko.
+If you're trying to answer his question, you shouldn't try.
+He can't hear you.
 
 set dialogue_is_going = false
 

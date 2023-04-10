@@ -2,9 +2,9 @@
 
 set dialogue_is_going = true
 
-Большое дерево. Яблок на нём нет.
-Или есть...
-В любом случае вы не узнаете, потому-что видите мир в двумерном пространстве.
+A big tree. There are no apples on it.
+Or there are...
+You wouldn't know anyway, because you see this world in two-dimensional space.
 
 set dialogue_is_going = false
 

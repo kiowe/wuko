@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_gfap6"]
+
+[resource]
+script = ExtResource("1_gfap6")
+titles = {
+"mid_tree": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "mid_tree",
+"type": "title"
+},
+"11": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "This is a tree. It's smaller than the big one.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is a tree. It's smaller than the big one.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "\"I wonder what color the leaves on the trees are?\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"I wonder what color the leaves on the trees are?\"",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"text": "I think those were the thoughts of your little friend Wuko.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think those were the thoughts of your little friend Wuko.",
+"type": "dialogue"
+},
+"9": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "11",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.14.1"

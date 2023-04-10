@@ -3,16 +3,16 @@
 set dialogue_is_going = true
 
 if skull_touched == false:
-	На земле лежит чей-то череп. Выглядит очень старым.
-	- Дотронуться.
+	There is someone's skull on the ground. It looks very old.
+	- Touch it.
 		set skull_touched = true
-		Как только рука Вуко достигла черепа, он тут же сломался.
-		Силы ему не занимать.
-	- Оставить в покое.
-		Вы решили не трогать череп.
-		Ваш опыт в Dark Souls не позволяет соврешить одну и ту же ошибку.
+		As soon as Wuko's hand reached his skull, it immediately broke.
+		He's got a lot of strength.
+	- Leave it alone.
+		You decided not to touch the skull.
+		Your experience in Dark Souls does not allow you to make the same mistake.
 else:
-	На земле лежит чей-то сломанный череп. Выглядит... разбитым.
+	On the ground lies someone's broken skull. It looks... broken.
 
 set dialogue_is_going = false
 

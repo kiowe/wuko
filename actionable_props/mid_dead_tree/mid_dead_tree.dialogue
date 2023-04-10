@@ -2,9 +2,9 @@
 
 set dialogue_is_going = true
 
-Это такое же дерево, как то с листвой.
-Но оно умерло.
-Ему явно не хватало заботы.
+It's the same tree as the one with the foliage.
+But it's dead.
+He clearly lacked care.
 
 set dialogue_is_going = false
 

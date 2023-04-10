@@ -2,14 +2,14 @@
 
 set dialogue_is_going = true
 
-Камень.
-- Попытаться подвинуть.
-	Вы пытаетесь двинуть камень.
-	Ваш ролл {{rand}}, порог силы 999, вы не смогли сдвинуть камень с места.
-	Повезёт в другой раз.
-- Уйти.
-	Камень вам не понравился и вы ушли.
-	Камень на вас обиделся.
+Rock.
+- Try to move it.
+	You are trying to move a stone.
+	Your roll {{rand}}, power threshold 999, you could not move the stone.
+	Better luck another time.
+- Leave.
+	You didn't like the rock and left.
+	The stone is offended at you.
 
 set dialogue_is_going = false
 

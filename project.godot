@@ -30,8 +30,8 @@ general/states=["State"]
 
 [display]
 
-window/vsync/vsync_mode=0
 window/stretch/mode="viewport"
+window/vsync/vsync_mode=0
 
 [editor]
 
@@ -88,6 +88,8 @@ menu={
 
 [internationalization]
 
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://actionable_props/ball/ball.en.translation", "res://actionable_props/ball/ball.ru.translation")
 locale/translations_pot_files=PackedStringArray("res://asdasdasd.dialogue", "res://NPC/Unknown/dialogues/main.dialogue", "res://npc/Unknown/dialogues/main.dialogue", "res://npc/Unknown/dialogues/unknown.dialogue", "res://npc/StrangeMan/dialogue/strange_man.dialogue", "res://npc/StrangeMan/dialogues/strange_man.dialogue", "res://resources/dialogues/button.dialogue", "res://actionable_props/skull/skull.dialogue", "res://actionable_props/big_tree/big_tree.dialogue", "res://actionable_props/mid_tree/mid_tree.dialogue", "res://actionable_props/ball/ball.dialogue", "res://actionable_props/mid_dead_tree/mid_dead_tree.dialogue", "res://actionable_props/big_dead_tree/big_dead_tree.dialogue", "res://actionable_props/small_rock/small_rock.dialogue", "res://actionable_props/mid_rock/mid_rock.dialogue", "res://actionable_props/big_rock/big_rock.dialogue", "res://actionable_props/big_ball_rock/big_ball_rock.dialogue")
 
 [layer_names]

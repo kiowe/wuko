@@ -3,17 +3,17 @@
 set dialogue_is_going = true
 
 if disappeared == false:
-	В этой стене есть щель. Похоже от сюда кто-то пытался выбраться.
-	- Посмотреть через щель.
+	There's a gap in this wall. It looks like someone was trying to get out of here.
+	- Look through the gap.
 		set disappeared = true
-		Вы решили глянуть через щель.
-		По ту сторону стены стоит мужчина, смотрящий на вас через экран.
-		[speed=0.4]Он уже позади вас.[next]
-		Шутка. Он всё ещё здесь.
-	- Посмотреть на стену.
-		Вы смотрите на стену. Возможно в этом что-то есть.
+		You decided to look through the gap.
+		On the other side of the wall is a man looking at you through the screen.
+		[speed=0.6][shake rate=50 level=30]He's already behind you.[/shake][/speed][next]
+		Joke. He's still here.
+	- Look at the wall.
+		You are looking at the wall. Perhaps there is something to it.
 else:
-	Или нет?
+	Or not?
 	
 	set dialogue_is_going = false
 	

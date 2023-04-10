@@ -2,9 +2,9 @@
 
 set dialogue_is_going = true
 
-Это мячик. 
-Как бы вы не старались его токлнуть, он всё равно стоит на месте.
-Кажется, он не хочет с вами играть.
+This is a ball.
+No matter how hard you try to push it, it still stands still.
+He doesn't seem to want to play with you.
 
 set dialogue_is_going = false
 

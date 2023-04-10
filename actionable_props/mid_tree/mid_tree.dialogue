@@ -2,9 +2,9 @@
 
 set dialogue_is_going = true
 
-Это дерево. Оно поменьше чем то большое.
-"Интересно, какого же цвета листья на деревьях?"
-Кажется, это были мысли вашего маленького друга Вуко.
+This is a tree. It's smaller than the big one.
+"I wonder what color the leaves on the trees are?"
+I think those were the thoughts of your little friend Wuko.
 
 set dialogue_is_going = false
 

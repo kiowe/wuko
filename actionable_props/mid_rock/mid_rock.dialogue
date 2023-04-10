@@ -2,37 +2,37 @@
 
 set dialogue_is_going = true
 
-[[БИТВА НАЧАЛАСЬ!]]
-[[ВАШ ПРОТИВНИК - КАМЕНЬ]]
+[[THE BATTLE HAS BEGUN!]]
+[[YOUR OPPONENT IS A ROCK]]
 
 ~ action
-[[ВАШИ ДЕЙСТВИЯ:]]
-- Ударить камень.
-	Вы заствляйте Вуко ударить по камню кулаком со всей силы.
-	Вуко скорчился от боли.
-	Вам должно быть стыдно. 
+[[YOUR ACTIONS:]]
+- Hit the rock.
+	You make Wuko hit the stone with his fist with all his strength.
+	Wuko crouched in pain.
+	You should be ashamed.
 	=> action
-- Использовать предмет.
+- Use an item.
 	if strange_item == "has" and equiped == false:
 		set equiped = true
-		Вы использовали предмет Тёмная цепочка.
+		You used the item Dark Chain.
 		...
-		Ничего не произошло.
+		Nothing happened.
 		=> action
 	elif strange_item == "has" and equiped == true:
-		Вам больше нечего одеть. 
+		You don't have any more items.
 		=> action
 	else:
-		У вас нет предметов. 
+		You have no items. 
 		=> action
-- Станцевать.
-	Вы танцуете перед камнем.
-	Камнень смотрит на вас с каменным лицом.
+- Dance.
+	You dance in front of the stone.
+	Stone looks at you with a stone face.
 	=> action
-- Убежать.
-	Вы решили избежать битвы.
+- Escape.
+	You decided to avoid the battle.
 
-Камень так ничего и не сделал.
+Stone never did anything.
 
 set dialogue_is_going = false
 

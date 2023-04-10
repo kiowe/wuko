@@ -1,0 +1,138 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_c8778"]
+
+[resource]
+script = ExtResource("1_c8778")
+titles = {
+"small_rock": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "small_rock",
+"type": "title"
+},
+"10": {
+"next_id": "11",
+"next_id_after": "14",
+"text": "Leave.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave.",
+"type": "response"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "10",
+"text": "You didn't like the rock and left.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You didn't like the rock and left.",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "14",
+"parent_id": "10",
+"text": "The stone is offended at you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The stone is offended at you.",
+"type": "dialogue"
+},
+"14": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "16",
+"type": "mutation"
+},
+"16": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Rock.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Rock.",
+"type": "dialogue"
+},
+"6": {
+"next_id": "7",
+"next_id_after": "14",
+"responses": PackedStringArray("6", "10"),
+"text": "Try to move it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Try to move it.",
+"type": "response"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "8",
+"parent_id": "6",
+"text": "You are trying to move a stone.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You are trying to move a stone.",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "6",
+"text": "Your roll {{rand}}, power threshold 999, you could not move the stone.",
+"text_replacements": Array[Dictionary]([{
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "rand"
+}]),
+"value_in_text": "{{rand}}"
+}]),
+"translation_key": "Your roll {{rand}}, power threshold 999, you could not move the stone.",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "14",
+"parent_id": "6",
+"text": "Better luck another time.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Better luck another time.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.14.1"

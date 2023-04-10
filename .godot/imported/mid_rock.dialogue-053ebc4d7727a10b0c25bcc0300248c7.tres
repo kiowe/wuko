@@ -1,0 +1,357 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_poyua"]
+
+[resource]
+script = ExtResource("1_poyua")
+titles = {
+"action": "9",
+"mid_rock": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "mid_rock",
+"type": "title"
+},
+"10": {
+"next_id": "11",
+"next_id_after": "35",
+"responses": PackedStringArray("10", "15", "28", "32"),
+"text": "Hit the rock.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hit the rock.",
+"type": "response"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "10",
+"text": "You make Wuko hit the stone with his fist with all his strength.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You make Wuko hit the stone with his fist with all his strength.",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "10",
+"text": "Wuko crouched in pain.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wuko crouched in pain.",
+"type": "dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "14",
+"parent_id": "10",
+"text": "You should be ashamed.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You should be ashamed.",
+"type": "dialogue"
+},
+"14": {
+"is_snippet": false,
+"next_id": "9",
+"parent_id": "10",
+"type": "goto"
+},
+"15": {
+"next_id": "16",
+"next_id_after": "35",
+"text": "Use an item.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Use an item.",
+"type": "response"
+},
+"16": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "strange_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "has"
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "equiped"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "22",
+"next_id": "17",
+"next_id_after": "35",
+"parent_id": "15",
+"type": "condition"
+},
+"17": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "equiped"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "18",
+"parent_id": "16",
+"type": "mutation"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "19",
+"parent_id": "16",
+"text": "You used the item Dark Chain.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You used the item Dark Chain.",
+"type": "dialogue"
+},
+"19": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "20",
+"parent_id": "16",
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "21",
+"parent_id": "16",
+"text": "Nothing happened.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nothing happened.",
+"type": "dialogue"
+},
+"21": {
+"is_snippet": false,
+"next_id": "9",
+"parent_id": "16",
+"type": "goto"
+},
+"22": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "strange_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "has"
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "equiped"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_conditional_id": "25",
+"next_id": "23",
+"next_id_after": "35",
+"parent_id": "15",
+"type": "condition"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "24",
+"parent_id": "22",
+"text": "You don't have any more items.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You don't have any more items.",
+"type": "dialogue"
+},
+"24": {
+"is_snippet": false,
+"next_id": "9",
+"parent_id": "22",
+"type": "goto"
+},
+"25": {
+"next_conditional_id": "35",
+"next_id": "26",
+"next_id_after": "35",
+"parent_id": "15",
+"type": "condition"
+},
+"26": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"parent_id": "25",
+"text": "You have no items.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You have no items.",
+"type": "dialogue"
+},
+"27": {
+"is_snippet": false,
+"next_id": "9",
+"parent_id": "25",
+"type": "goto"
+},
+"28": {
+"next_id": "29",
+"next_id_after": "35",
+"text": "Dance.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dance.",
+"type": "response"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "30",
+"parent_id": "28",
+"text": "You dance in front of the stone.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You dance in front of the stone.",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"30": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "28",
+"text": "Stone looks at you with a stone face.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stone looks at you with a stone face.",
+"type": "dialogue"
+},
+"31": {
+"is_snippet": false,
+"next_id": "9",
+"parent_id": "28",
+"type": "goto"
+},
+"32": {
+"next_id": "33",
+"next_id_after": "35",
+"text": "Escape.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Escape.",
+"type": "response"
+},
+"33": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "35",
+"parent_id": "32",
+"text": "You decided to avoid the battle.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You decided to avoid the battle.",
+"type": "dialogue"
+},
+"35": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "37",
+"text": "Stone never did anything.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stone never did anything.",
+"type": "dialogue"
+},
+"37": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "39",
+"type": "mutation"
+},
+"39": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "[[THE BATTLE HAS BEGUN!]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[THE BATTLE HAS BEGUN!]]",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"text": "[[YOUR OPPONENT IS A ROCK]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[YOUR OPPONENT IS A ROCK]]",
+"type": "dialogue"
+},
+"8": {
+"next_id": "9",
+"text": "action",
+"type": "title"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"text": "[[YOUR ACTIONS:]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[YOUR ACTIONS:]]",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.14.1"

@@ -1,0 +1,1284 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dbido"]
+
+[resource]
+script = ExtResource("1_dbido")
+titles = {
+"get_item": "97",
+"unknown_dialogue": "3"
+}
+character_names = PackedStringArray("Unknown")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "unknown_dialogue",
+"type": "title"
+},
+"10": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"parent_id": "5",
+"text": "[wave amp=15 freq=5]Could you open it for me and get the thing that's in there?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Could you open it for me and get the thing that's in there?[/wave]",
+"type": "dialogue"
+},
+"100": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "strange_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "no"
+}])
+},
+"next_conditional_id": "111",
+"next_id": "101",
+"next_id_after": "116",
+"parent_id": "99",
+"type": "condition"
+},
+"101": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "102",
+"parent_id": "100",
+"text": "You open the chest. The chest reveals a dark chain.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You open the chest. The chest reveals a dark chain.",
+"type": "dialogue"
+},
+"102": {
+"next_id": "103",
+"next_id_after": "116",
+"parent_id": "100",
+"responses": PackedStringArray("102", "109"),
+"text": "Take the chain.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Take the chain.",
+"type": "response"
+},
+"103": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "104",
+"parent_id": "102",
+"text": "[Dark Chain ITEM WAS ADDED TO YOUR INVENTORY].",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[Dark Chain ITEM WAS ADDED TO YOUR INVENTORY].",
+"type": "dialogue"
+},
+"104": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "strange_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "has"
+}])
+},
+"next_id": "105",
+"parent_id": "102",
+"type": "mutation"
+},
+"105": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "helper"
+}])
+},
+"next_conditional_id": "107",
+"next_id": "106",
+"next_id_after": "116",
+"parent_id": "102",
+"type": "condition"
+},
+"106": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "116",
+"parent_id": "105",
+"text": "You probably want to take the chain to that [wave amp=15 freq=5]ghost[/wave].",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You probably want to take the chain to that [wave amp=15 freq=5]ghost[/wave].",
+"type": "dialogue"
+},
+"107": {
+"next_conditional_id": "116",
+"next_id": "108",
+"next_id_after": "116",
+"parent_id": "102",
+"type": "condition"
+},
+"108": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "116",
+"parent_id": "107",
+"text": "You probably want to keep this chain.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You probably want to keep this chain.",
+"type": "dialogue"
+},
+"109": {
+"next_id": "110",
+"next_id_after": "116",
+"parent_id": "100",
+"text": "Close the chest.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Close the chest.",
+"type": "response"
+},
+"11": {
+"next_id": "12",
+"next_id_after": "90",
+"parent_id": "5",
+"responses": PackedStringArray("11", "14"),
+"text": "Of course I will help you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course I will help you.",
+"type": "response"
+},
+"110": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "116",
+"parent_id": "109",
+"text": "You decided not to touch this thing. Maybe it will put a curse on you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You decided not to touch this thing. Maybe it will put a curse on you?",
+"type": "dialogue"
+},
+"111": {
+"next_conditional_id": "116",
+"next_id": "112",
+"next_id_after": "116",
+"parent_id": "99",
+"type": "condition"
+},
+"112": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "116",
+"parent_id": "111",
+"text": "There is nothing else in this chest.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There is nothing else in this chest.",
+"type": "dialogue"
+},
+"113": {
+"next_conditional_id": "116",
+"next_id": "114",
+"next_id_after": "116",
+"type": "condition"
+},
+"114": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "116",
+"parent_id": "113",
+"text": "It seems that this [wave amp=15 freq=5]ghost[/wave] is guarding this chest. Try to talk to him.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It seems that this [wave amp=15 freq=5]ghost[/wave] is guarding this chest. Try to talk to him.",
+"type": "dialogue"
+},
+"116": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "118",
+"type": "mutation"
+},
+"118": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"12": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "helper"
+}])
+},
+"next_id": "13",
+"parent_id": "11",
+"type": "mutation"
+},
+"13": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "11",
+"text": "[wave amp=15 freq=5]Thank you, I'll wait for you right here.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Thank you, I'll wait for you right here.[/wave]",
+"type": "dialogue"
+},
+"14": {
+"next_id": "15",
+"next_id_after": "90",
+"parent_id": "5",
+"text": "No, solve your own problems.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, solve your own problems.",
+"type": "response"
+},
+"15": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "selfish"
+}])
+},
+"next_id": "16",
+"parent_id": "14",
+"type": "mutation"
+},
+"16": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "14",
+"text": "[wave amp=15 freq=5]Then I dare not detain you...[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Then I dare not detain you...[/wave]",
+"type": "dialogue"
+},
+"18": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "helper"
+}])
+},
+"next_conditional_id": "41",
+"next_id": "19",
+"next_id_after": "90",
+"type": "condition"
+},
+"19": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "strange_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "has"
+}])
+},
+"next_conditional_id": "32",
+"next_id": "20",
+"next_id_after": "90",
+"parent_id": "18",
+"type": "condition"
+},
+"20": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "21",
+"parent_id": "19",
+"text": "[wave amp=15 freq=5]Oh, I see you have the thing. Can you put it on me?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Oh, I see you have the thing. Can you put it on me?[/wave]",
+"type": "dialogue"
+},
+"21": {
+"next_id": "22",
+"next_id_after": "90",
+"parent_id": "19",
+"responses": PackedStringArray("21"),
+"text": "What is this chain?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What is this chain?",
+"type": "response"
+},
+"22": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "23",
+"parent_id": "21",
+"text": "[wave amp=15 freq=5]A kind person made it for me so that the world around me could become tangible again.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]A kind person made it for me so that the world around me could become tangible again.[/wave]",
+"type": "dialogue"
+},
+"23": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "24",
+"parent_id": "21",
+"text": "[wave amp=15 freq=5]But there is one bad man who stole this chain from me, and for several days now I have been living as a ghost.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]But there is one bad man who stole this chain from me, and for several days now I have been living as a ghost.[/wave]",
+"type": "dialogue"
+},
+"24": {
+"next_id": "25",
+"next_id_after": "90",
+"parent_id": "21",
+"responses": PackedStringArray("24", "28"),
+"text": "Okay, bend over a little bit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay, bend over a little bit.",
+"type": "response"
+},
+"25": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "friend"
+}])
+},
+"next_id": "26",
+"parent_id": "24",
+"type": "mutation"
+},
+"26": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"parent_id": "24",
+"text": "[wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]",
+"type": "dialogue"
+},
+"27": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "24",
+"text": "[wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]",
+"type": "dialogue"
+},
+"28": {
+"next_id": "29",
+"next_id_after": "90",
+"parent_id": "21",
+"text": "No, I'll keep it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I'll keep it.",
+"type": "response"
+},
+"29": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "enemy"
+}])
+},
+"next_id": "30",
+"parent_id": "28",
+"type": "mutation"
+},
+"3": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"30": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "28",
+"text": "[wave amp=15 freq=5]Is that so? Well, you will regret it.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Is that so? Well, you will regret it.[/wave]",
+"type": "dialogue"
+},
+"31": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "28",
+"text": "[wave amp=15 freq=5]Get lost, I don't want to see you.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Get lost, I don't want to see you.[/wave]",
+"type": "dialogue"
+},
+"32": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "asked"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "38",
+"next_id": "33",
+"next_id_after": "90",
+"parent_id": "18",
+"type": "condition"
+},
+"33": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "34",
+"parent_id": "32",
+"text": "[wave amp=15 freq=5]What is it?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]What is it?[/wave]",
+"type": "dialogue"
+},
+"34": {
+"next_id": "35",
+"next_id_after": "90",
+"parent_id": "32",
+"responses": PackedStringArray("34"),
+"text": "No key required for the chest?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No key required for the chest?",
+"type": "response"
+},
+"35": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "asked"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "36",
+"parent_id": "34",
+"type": "mutation"
+},
+"36": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "37",
+"parent_id": "34",
+"text": "[wave amp=15 freq=5]No, that idiot didn't lock it, so we were partly lucky.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]No, that idiot didn't lock it, so we were partly lucky.[/wave]",
+"type": "dialogue"
+},
+"37": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "34",
+"text": "[wave amp=15 freq=5]So you can go and open it in peace.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]So you can go and open it in peace.[/wave]",
+"type": "dialogue"
+},
+"38": {
+"next_conditional_id": "90",
+"next_id": "39",
+"next_id_after": "90",
+"parent_id": "18",
+"type": "condition"
+},
+"39": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "38",
+"text": "[wave amp=15 freq=5]Why don't you go and get the thing from the chest?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Why don't you go and get the thing from the chest?[/wave]",
+"type": "dialogue"
+},
+"41": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "selfish"
+}])
+},
+"next_conditional_id": "66",
+"next_id": "42",
+"next_id_after": "90",
+"type": "condition"
+},
+"42": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "strange_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "has"
+}])
+},
+"next_conditional_id": "55",
+"next_id": "43",
+"next_id_after": "90",
+"parent_id": "41",
+"type": "condition"
+},
+"43": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "44",
+"parent_id": "42",
+"text": "[wave amp=15 freq=5]You decided to help me after all?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]You decided to help me after all?[/wave]",
+"type": "dialogue"
+},
+"44": {
+"next_id": "45",
+"next_id_after": "90",
+"parent_id": "42",
+"responses": PackedStringArray("44"),
+"text": "What is this chain?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What is this chain?",
+"type": "response"
+},
+"45": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "46",
+"parent_id": "44",
+"text": "[wave amp=15 freq=5]A kind person made it for me so that the world around me could become tangible again.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]A kind person made it for me so that the world around me could become tangible again.[/wave]",
+"type": "dialogue"
+},
+"46": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "47",
+"parent_id": "44",
+"text": "[wave amp=15 freq=5]But there is one bad man who stole this chain from me, and for several days now I have been living as a ghost.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]But there is one bad man who stole this chain from me, and for several days now I have been living as a ghost.[/wave]",
+"type": "dialogue"
+},
+"47": {
+"next_id": "48",
+"next_id_after": "90",
+"parent_id": "44",
+"responses": PackedStringArray("47", "51"),
+"text": "Okay, bend over a little bit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay, bend over a little bit.",
+"type": "response"
+},
+"48": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "friend"
+}])
+},
+"next_id": "49",
+"parent_id": "47",
+"type": "mutation"
+},
+"49": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "50",
+"parent_id": "47",
+"text": "[wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]",
+"type": "dialogue"
+},
+"5": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "unknown"
+}])
+},
+"next_conditional_id": "18",
+"next_id": "6",
+"next_id_after": "90",
+"type": "condition"
+},
+"50": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "47",
+"text": "[wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]",
+"type": "dialogue"
+},
+"51": {
+"next_id": "52",
+"next_id_after": "90",
+"parent_id": "44",
+"text": "No, I'll keep it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I'll keep it.",
+"type": "response"
+},
+"52": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "enemy"
+}])
+},
+"next_id": "53",
+"parent_id": "51",
+"type": "mutation"
+},
+"53": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "54",
+"parent_id": "51",
+"text": "[wave amp=15 freq=5]Is that so? Well, you will regret it.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Is that so? Well, you will regret it.[/wave]",
+"type": "dialogue"
+},
+"54": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "51",
+"text": "[wave amp=15 freq=5]Get lost, I don't want to see you.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Get lost, I don't want to see you.[/wave]",
+"type": "dialogue"
+},
+"55": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "asked"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "63",
+"next_id": "56",
+"next_id_after": "90",
+"parent_id": "41",
+"type": "condition"
+},
+"56": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "57",
+"parent_id": "55",
+"text": "[wave amp=15 freq=5]What is it? You've thought about your answer and changed your mind?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]What is it? You've thought about your answer and changed your mind?[/wave]",
+"type": "dialogue"
+},
+"57": {
+"next_id": "58",
+"next_id_after": "90",
+"parent_id": "55",
+"responses": PackedStringArray("57", "61"),
+"text": "No key required for the chest?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No key required for the chest?",
+"type": "response"
+},
+"58": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "asked"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "59",
+"parent_id": "57",
+"type": "mutation"
+},
+"59": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "60",
+"parent_id": "57",
+"text": "[wave amp=15 freq=5]No, that evil person didn't lock it, so we were partly lucky.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]No, that evil person didn't lock it, so we were partly lucky.[/wave]",
+"type": "dialogue"
+},
+"6": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"parent_id": "5",
+"text": "[wave amp=15 freq=5]Hello.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Hello.[/wave]",
+"type": "dialogue"
+},
+"60": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "57",
+"text": "[wave amp=15 freq=5]So you can go and open it in peace.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]So you can go and open it in peace.[/wave]",
+"type": "dialogue"
+},
+"61": {
+"next_id": "62",
+"next_id_after": "90",
+"parent_id": "55",
+"text": "No, I just came to see.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I just came to see.",
+"type": "response"
+},
+"62": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "61",
+"text": "[wave amp=15 freq=5]Nothing to see here, get lost.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Nothing to see here, get lost.[/wave]",
+"type": "dialogue"
+},
+"63": {
+"next_conditional_id": "90",
+"next_id": "64",
+"next_id_after": "90",
+"parent_id": "41",
+"type": "condition"
+},
+"64": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "63",
+"text": "[wave amp=15 freq=5]Why don't you go and get the thing from the chest?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Why don't you go and get the thing from the chest?[/wave]",
+"type": "dialogue"
+},
+"66": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "enemy"
+}])
+},
+"next_conditional_id": "75",
+"next_id": "67",
+"next_id_after": "90",
+"type": "condition"
+},
+"67": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "68",
+"parent_id": "66",
+"text": "[wave amp=15 freq=5]So why are you here? Change your mind?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]So why are you here? Change your mind?[/wave]",
+"type": "dialogue"
+},
+"68": {
+"next_id": "69",
+"next_id_after": "90",
+"parent_id": "66",
+"responses": PackedStringArray("68", "72"),
+"text": "Yes, bend over a little bit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, bend over a little bit.",
+"type": "response"
+},
+"69": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "friend"
+}])
+},
+"next_id": "70",
+"parent_id": "68",
+"type": "mutation"
+},
+"7": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "8",
+"parent_id": "5",
+"text": "[wave amp=15 freq=5]Even though this is the first time we've seen each other, I would like to ask you something.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Even though this is the first time we've seen each other, I would like to ask you something.[/wave]",
+"type": "dialogue"
+},
+"70": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "71",
+"parent_id": "68",
+"text": "[wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]",
+"type": "dialogue"
+},
+"71": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "68",
+"text": "[wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]",
+"type": "dialogue"
+},
+"72": {
+"next_id": "73",
+"next_id_after": "90",
+"parent_id": "66",
+"text": "No, I just came to mock you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I just came to mock you.",
+"type": "response"
+},
+"73": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "72",
+"text": "[wave amp=15 freq=5]...[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]...[/wave]",
+"type": "dialogue"
+},
+"75": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "friend"
+}])
+},
+"next_conditional_id": "90",
+"next_id": "76",
+"next_id_after": "90",
+"type": "condition"
+},
+"76": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "77",
+"parent_id": "75",
+"text": "[wave amp=15 freq=5]Hello, friend. Thank you so much for this thing. I thought I was going to live the rest of my life like this... Even though I'm already dead, ha-ha-ha![/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Hello, friend. Thank you so much for this thing. I thought I was going to live the rest of my life like this... Even though I'm already dead, ha-ha-ha![/wave]",
+"type": "dialogue"
+},
+"77": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "buy_a_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "otodvigator"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "87",
+"next_id": "78",
+"next_id_after": "90",
+"parent_id": "75",
+"type": "condition"
+},
+"78": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "79",
+"parent_id": "77",
+"text": "[wave amp=15 freq=5]I think you wanted to ask me something.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]I think you wanted to ask me something.[/wave]",
+"type": "dialogue"
+},
+"79": {
+"next_id": "80",
+"next_id_after": "90",
+"parent_id": "77",
+"responses": PackedStringArray("79", "85"),
+"text": "Are you still selling OTODVIGATOR3128?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Are you still selling OTODVIGATOR3128?",
+"type": "response"
+},
+"8": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "5",
+"text": "[wave amp=15 freq=5]There's no way I can open this chest, because I have no hands at all.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]There's no way I can open this chest, because I have no hands at all.[/wave]",
+"type": "dialogue"
+},
+"80": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "otodvigator"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "81",
+"parent_id": "79",
+"type": "mutation"
+},
+"81": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "82",
+"parent_id": "79",
+"text": "[wave amp=15 freq=5]Oh, is that what you came for? I'm sorry to bother you with my business.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Oh, is that what you came for? I'm sorry to bother you with my business.[/wave]",
+"type": "dialogue"
+},
+"82": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "83",
+"parent_id": "79",
+"text": "[wave amp=15 freq=5]I'd have to get that thing anyway, though.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]I'd have to get that thing anyway, though.[/wave]",
+"type": "dialogue"
+},
+"83": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "84",
+"parent_id": "79",
+"text": "[wave amp=15 freq=5]Here, I'll give it to you for free, service for service.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Here, I'll give it to you for free, service for service.[/wave]",
+"type": "dialogue"
+},
+"84": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "79",
+"text": "[[RECEIVED ITEM OTODVIGATOR3128]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[RECEIVED ITEM OTODVIGATOR3128]]",
+"type": "dialogue"
+},
+"85": {
+"next_id": "86",
+"next_id_after": "90",
+"parent_id": "77",
+"text": "Nope, nothing.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nope, nothing.",
+"type": "response"
+},
+"86": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "85",
+"text": "[wave amp=15 freq=5]Then, good luck. Come back anytime.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]Then, good luck. Come back anytime.[/wave]",
+"type": "dialogue"
+},
+"87": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "otodvigator"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_conditional_id": "90",
+"next_id": "88",
+"next_id_after": "90",
+"parent_id": "75",
+"type": "condition"
+},
+"88": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "90",
+"parent_id": "87",
+"text": "[wave amp=15 freq=5]I hope my stuff was useful to you! Come shopping again.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]I hope my stuff was useful to you! Come shopping again.[/wave]",
+"type": "dialogue"
+},
+"9": {
+"character": "Unknown",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"parent_id": "5",
+"text": "[wave amp=15 freq=5]And when I try to touch something with my body, I go through it.[/wave]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[wave amp=15 freq=5]And when I try to touch something with my body, I go through it.[/wave]",
+"type": "dialogue"
+},
+"90": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "92",
+"type": "mutation"
+},
+"92": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"95": {
+"next_id": "97",
+"text": "get_item",
+"type": "title"
+},
+"97": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "99",
+"type": "mutation"
+},
+"99": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "group",
+"value": Array[Dictionary]([{
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "helper"
+}, {
+"type": "and_or",
+"value": "or"
+}, {
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "selfish"
+}, {
+"type": "and_or",
+"value": "or"
+}, {
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "enemy"
+}, {
+"type": "and_or",
+"value": "or"
+}, {
+"type": "variable",
+"value": "relationship"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "friend"
+}])
+}])
+},
+"next_conditional_id": "113",
+"next_id": "100",
+"next_id_after": "116",
+"type": "condition"
+}
+}
+metadata/dialogue_manager_version = "2.14.1"

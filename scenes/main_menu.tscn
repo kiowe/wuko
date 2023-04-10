@@ -97,7 +97,7 @@ theme_override_colors/font_focus_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Играть"
+text = "Play"
 flat = true
 
 [node name="ButtonSettings" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -110,7 +110,7 @@ theme_override_colors/font_focus_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Настройки"
+text = "Settings"
 flat = true
 
 [node name="ButtonInfo" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -123,7 +123,7 @@ theme_override_colors/font_focus_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Информация"
+text = "Info"
 flat = true
 
 [node name="ButtonQuit" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -136,7 +136,7 @@ theme_override_colors/font_focus_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Выйти"
+text = "Quit"
 flat = true
 
 [node name="Settings" type="Control" parent="CanvasLayer"]
@@ -196,7 +196,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 48
-text = "Настройки
+text = "SETTINGS
  "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -212,7 +212,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "На весь экран"
+text = "Fullscreen   "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -230,7 +230,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Мастер "
+text = "Master "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -255,7 +255,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Музыка "
+text = "Music  "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -280,7 +280,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Эффекты"
+text = "Effects"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -307,7 +307,7 @@ theme_override_colors/font_focus_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0.192157, 0.14902, 1)
 theme_override_fonts/font = ExtResource("2_62t8n")
 theme_override_font_sizes/font_size = 30
-text = "Назад"
+text = "Back"
 flat = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

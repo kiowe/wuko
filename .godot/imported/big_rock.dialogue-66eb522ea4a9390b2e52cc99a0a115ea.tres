@@ -1,0 +1,375 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ckpwf"]
+
+[resource]
+script = ExtResource("1_ckpwf")
+titles = {
+"big_rock": "3"
+}
+character_names = PackedStringArray("You find a note")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "big_rock",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "11",
+"parent_id": "7",
+"text": "\"Then purchase OTODVIGATOR3128 for a ridiculous price from a ghostly stranger!\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"Then purchase OTODVIGATOR3128 for a ridiculous price from a ghostly stranger!\"",
+"type": "dialogue"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "12",
+"parent_id": "7",
+"text": "\"90% off! Just today, maybe yesterday, maybe even tomorrow!\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"90% off! Just today, maybe yesterday, maybe even tomorrow!\"",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "7",
+"text": "You decided to throw away the paper while the text with advertising content was appearing on it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You decided to throw away the paper while the text with advertising content was appearing on it.",
+"type": "dialogue"
+},
+"13": {
+"next_id": "14",
+"next_id_after": "31",
+"parent_id": "5",
+"text": "No.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No.",
+"type": "response"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "15",
+"parent_id": "13",
+"text": "\"Oh, that's how it is. It's very likely that you can walk...\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"Oh, that's how it is. It's very likely that you can walk...\"",
+"type": "dialogue"
+},
+"15": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "16",
+"parent_id": "13",
+"text": "\"Please put the note back, in case any buyers show up.\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"Please put the note back, in case any buyers show up.\"",
+"type": "dialogue"
+},
+"16": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "17",
+"parent_id": "13",
+"text": "You put the note back where it was.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You put the note back where it was.",
+"type": "dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "13",
+"text": "As soon as you did, the same message appeared on the note again.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "As soon as you did, the same message appeared on the note again.",
+"type": "dialogue"
+},
+"18": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "otodvigator"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "otodv_used"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "23",
+"next_id": "19",
+"next_id_after": "31",
+"type": "condition"
+},
+"19": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "otodv_used"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "20",
+"parent_id": "18",
+"type": "mutation"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "21",
+"parent_id": "18",
+"text": "You hold this marvel of technology in your hands and try to use it on this rock.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You hold this marvel of technology in your hands and try to use it on this rock.",
+"type": "dialogue"
+},
+"21": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "22",
+"parent_id": "18",
+"text": "You have no idea how to use it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You have no idea how to use it.",
+"type": "dialogue"
+},
+"22": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "18",
+"text": "You blame all your troubles on a ghost.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You blame all your troubles on a ghost.",
+"type": "dialogue"
+},
+"23": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "otodvigator"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "otodv_used"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_conditional_id": "25",
+"next_id": "24",
+"next_id_after": "31",
+"type": "condition"
+},
+"24": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "23",
+"text": "The rock never moved.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The rock never moved.",
+"type": "dialogue"
+},
+"25": {
+"next_conditional_id": "31",
+"next_id": "26",
+"next_id_after": "31",
+"type": "condition"
+},
+"26": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "27",
+"parent_id": "25",
+"text": "You have to go to that ghost by the chest.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You have to go to that ghost by the chest.",
+"type": "dialogue"
+},
+"27": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "28",
+"parent_id": "25",
+"text": "Maybe OTODVIGATOR3128 can solve this problem.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe OTODVIGATOR3128 can solve this problem.",
+"type": "dialogue"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "29",
+"parent_id": "25",
+"text": "You can't just go around that rock.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You can't just go around that rock.",
+"type": "dialogue"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "31",
+"parent_id": "25",
+"text": "It definitely needs to be pushed back.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It definitely needs to be pushed back.",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"31": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "33",
+"type": "mutation"
+},
+"33": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "otodvigator"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "buy_a_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "18",
+"next_id": "6",
+"next_id_after": "31",
+"type": "condition"
+},
+"6": {
+"character": "You find a note",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"parent_id": "5",
+"text": "\"Is a huge rock standing in your way? Answer the question by pressing the button!\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"Is a huge rock standing in your way? Answer the question by pressing the button!\"",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "31",
+"parent_id": "5",
+"responses": PackedStringArray("7", "13"),
+"text": "Yes.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes.",
+"type": "response"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "9",
+"parent_id": "7",
+"text": "You click on the drawn \"Yes\" button.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You click on the drawn \"Yes\" button.",
+"type": "dialogue"
+},
+"9": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "buy_a_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "10",
+"parent_id": "7",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.14.1"

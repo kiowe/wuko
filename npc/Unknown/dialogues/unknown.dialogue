@@ -3,89 +3,89 @@
 set dialogue_is_going = true
 
 if relationship == "unknown":
-	Незнакомец: Здравствуй.
-	Незнакомец: Хоть мы и впервые видимся, я хотел бы тебя кое о чём попросить.
-	Незнакомец: Я совсем никак не могу открыть этот сундучок, ведь рук у меня совсем нет.
-	Незнакомец: А когда я пытаюсь прикоснуться к чему-то своим телом, то прохожу сквозь.
-	Незнакомец: Не мог бы ты открыть его для меня и достать от туда лежащую там вещь?
-	- Конечно, помогу.
+	Unknown: [wave amp=15 freq=5]Hello.[/wave]
+	Unknown: [wave amp=15 freq=5]Even though this is the first time we've seen each other, I would like to ask you something.[/wave]
+	Unknown: [wave amp=15 freq=5]There's no way I can open this chest, because I have no hands at all.[/wave]
+	Unknown: [wave amp=15 freq=5]And when I try to touch something with my body, I go through it.[/wave]
+	Unknown: [wave amp=15 freq=5]Could you open it for me and get the thing that's in there?[/wave]
+	- Of course I will help you.
 		set relationship = "helper"
-		Незнакомец: Благодарю, буду ждать тебя прямо здесь.
-	- Нет, решай свои проблемы сам.
+		Unknown: [wave amp=15 freq=5]Thank you, I'll wait for you right here.[/wave]
+	- No, solve your own problems.
 		set relationship = "selfish"
-		Незнакомец: Тогда не смею задерживать...
+		Unknown: [wave amp=15 freq=5]Then I dare not detain you...[/wave]
 
 elif relationship == "helper":
 	if strange_item == "has":
-		Незнакомец: О, вижу она у тебя. Можешь надеть её на меня?
-		- Что это за цепочка?
-			Незнакомец: Один добрый человек сделал его для меня, чтобы окружающий меня мир вновь стал осязаемым.
-			Незнакомец: Но есть один злой человек, который стащил с меня эту цепочку, и вот уже несколько дней как я живу как призрак.
-			- Хорошо, наклонись немного.
+		Unknown: [wave amp=15 freq=5]Oh, I see you have the thing. Can you put it on me?[/wave]
+		- What is this chain?
+			Unknown: [wave amp=15 freq=5]A kind person made it for me so that the world around me could become tangible again.[/wave]
+			Unknown: [wave amp=15 freq=5]But there is one bad man who stole this chain from me, and for several days now I have been living as a ghost.[/wave]
+			- Okay, bend over a little bit.
 				set relationship = "friend"
-				Незнакомец: Спасибо тебе огромное, ты очень добрый... человек?
-				Незнакомец: В принципе, это не так уж и важно, ха-ха!
-			- Нет, я оставлю это у себя.
+				Unknown: [wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]
+				Unknown: [wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]
+			- No, I'll keep it.
 				set relationship = "enemy"
-				Незнакомец: Вот значит как? Ну ты ещё пожалеешь об этом.
-				Незнакомец: Сгинь, видеть тебя не желаю.
+				Unknown: [wave amp=15 freq=5]Is that so? Well, you will regret it.[/wave]
+				Unknown: [wave amp=15 freq=5]Get lost, I don't want to see you.[/wave]
 	elif asked == false:
-		Незнакомец: Что такое?
-		- Для сундучка не требуется ключ?
+		Unknown: [wave amp=15 freq=5]What is it?[/wave]
+		- No key required for the chest?
 			set asked = true
-			Незнакомец: Нет, тот идиот не закрыл его на ключ, так что, отчасти, нам повезло.
-			Незнакомец: Так что можешь идти и спокойно открыть его.
+			Unknown: [wave amp=15 freq=5]No, that idiot didn't lock it, so we were partly lucky.[/wave]
+			Unknown: [wave amp=15 freq=5]So you can go and open it in peace.[/wave]
 	else:
-		Незнакомец: Почему-бы тебе не пойти и не взять вещь из сундучка?
+		Unknown: [wave amp=15 freq=5]Why don't you go and get the thing from the chest?[/wave]
 
 elif relationship == "selfish":
 	if strange_item == "has":
-		Незнакомец: Ты всё-таки решил мне помочь?
-		- Что это за цепочка?
-			Незнакомец: Один добрый человек сделал его для меня, чтобы окружающий меня мир вновь стал осязаемым.
-			Незнакомец: Но есть один злой человек, который стащил с меня эту цепочку, и вот уже несколько дней как я живу как призрак.
-			- Хорошо, наклонись немного.
+		Unknown: [wave amp=15 freq=5]You decided to help me after all?[/wave]
+		- What is this chain?
+			Unknown: [wave amp=15 freq=5]A kind person made it for me so that the world around me could become tangible again.[/wave]
+			Unknown: [wave amp=15 freq=5]But there is one bad man who stole this chain from me, and for several days now I have been living as a ghost.[/wave]
+			- Okay, bend over a little bit.
 				set relationship = "friend"
-				Незнакомец: Спасибо тебе огромное, ты очень добрый... человек?
-				Незнакомец: В принципе, это не так важно, ха-ха!
-			- Нет, я оставлю это у себя.
+				Unknown: [wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]
+				Unknown: [wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]
+			- No, I'll keep it.
 				set relationship = "enemy"
-				Незнакомец: Вот значит как? Ну ты ещё пожалеешь об этом.
-				Незнакомец: Проваливай, видеть тебя не желаю.
+				Unknown: [wave amp=15 freq=5]Is that so? Well, you will regret it.[/wave]
+				Unknown: [wave amp=15 freq=5]Get lost, I don't want to see you.[/wave]
 	elif asked == false:
-		Незнакомец: Что такое? Подумал над ответом и передумал?
-		- Для сундучка не требуется ключ?
+		Unknown: [wave amp=15 freq=5]What is it? You've thought about your answer and changed your mind?[/wave]
+		- No key required for the chest?
 			set asked = true
-			Незнакомец: Нет, тот идиот не закрыл его на ключ, так что, отчасти, нам повезло.
-			Незнакомец: Так что можешь идти и спокойно открыть его.
-		- Нет, просто подошёл посмотреть.
-			Незнакомец: Не на что тут смотреть, проваливай.
+			Unknown: [wave amp=15 freq=5]No, that evil person didn't lock it, so we were partly lucky.[/wave]
+			Unknown: [wave amp=15 freq=5]So you can go and open it in peace.[/wave]
+		- No, I just came to see.
+			Unknown: [wave amp=15 freq=5]Nothing to see here, get lost.[/wave]
 	else:
-		Незнакомец: Почему-бы тебе не пойти и не взять вещь из сундучка?
+		Unknown: [wave amp=15 freq=5]Why don't you go and get the thing from the chest?[/wave]
 
 elif relationship == "enemy":
-	Незнакомец: Чего подошёл? Передумал?
-	- Да, наклонись немного.
+	Unknown: [wave amp=15 freq=5]So why are you here? Change your mind?[/wave]
+	- Yes, bend over a little bit.
 		set relationship = "friend"
-		Незнакомец: Спасибо тебе огромное, ты очень добрый... человек?
-		Незнакомец: В принципе, это не так уж и важно, ха-ха!
-	- Нет, просто поиздеваться подошёл.
-		Незнакомец: ...
+		Unknown: [wave amp=15 freq=5]Thank you very much, you are a very kind... human?[/wave]
+		Unknown: [wave amp=15 freq=5]Basically, it's not that big of a deal, ha ha![/wave]
+	- No, I just came to mock you.
+		Unknown: [wave amp=15 freq=5]...[/wave]
 
 elif relationship == "friend":
-	Незнакомец: Здравствуй, друг. Огромное тебе спасибо за вещицу. Я уже думал что весь свой остаток жизни проживу вот так... Хотя я и так мёртв, ха-ха-ха!
+	Unknown: [wave amp=15 freq=5]Hello, friend. Thank you so much for this thing. I thought I was going to live the rest of my life like this... Even though I'm already dead, ha-ha-ha![/wave]
 	if buy_a_item == true and otodvigator == false:
-		Незнакомец: Кажется ты хотел кое-что спросить
-		- Ты до сих пор продаёшь ОТОДВИГАТОР3128?
+		Unknown: [wave amp=15 freq=5]I think you wanted to ask me something.[/wave]
+		- Are you still selling OTODVIGATOR3128?
 			set otodvigator = true
-			Незнакомец: Ох, ты пришёл за этим? Извини что напряг тебя со своим делом.
-			Незнакомец: Хотя, в любом случае пришлось бы достать эту вещь.
-			Незнакомец: Вот, держи, отдаю тебе его бесплатно, услуга за услугу.
-			[[ПОЛУЧЕН ПРЕДМЕТ ОТОДВИГАТОР3128]]
-		- Нет, ничего.
-			Незнакомец: Тогда, желаю удачи. Приходи в любое время.
+			Unknown: [wave amp=15 freq=5]Oh, is that what you came for? I'm sorry to bother you with my business.[/wave]
+			Unknown: [wave amp=15 freq=5]I'd have to get that thing anyway, though.[/wave]
+			Unknown: [wave amp=15 freq=5]Here, I'll give it to you for free, service for service.[/wave]
+			[[RECEIVED ITEM OTODVIGATOR3128]]
+		- Nope, nothing.
+			Unknown: [wave amp=15 freq=5]Then, good luck. Come back anytime.[/wave]
 	elif otodvigator == true:
-		Незнакомец: Надеюсь моя вещица тебе пригодилась! Приходи за покупками ещё.
+		Unknown: [wave amp=15 freq=5]I hope my stuff was useful to you! Come shopping again.[/wave]
 
 set dialogue_is_going = false
 
@@ -98,20 +98,20 @@ set dialogue_is_going = true
 
 if (relationship == "helper" or relationship == "selfish" or relationship == "enemy" or relationship == "friend"):
 	if strange_item == "no":
-		Вы открываете сундук. В сундуке обнаруживается тёмная цепочка.
-		- Взять цепочку.
-			[В ВАШ ИНВЕНТАРЬ ДОБАВЛЕН ПРЕДМЕТ Тёмная цепочка.]
+		You open the chest. The chest reveals a dark chain.
+		- Take the chain.
+			[Dark Chain ITEM WAS ADDED TO YOUR INVENTORY].
 			set strange_item = "has"
 			if relationship == "helper":
-				Вероятно, вы захотите отнести цепочку тому призраку.
+				You probably want to take the chain to that [wave amp=15 freq=5]ghost[/wave].
 			else:
-				Вероятно, вы захотите оставить эту цепочку себе.
-		- Закрыть сундук.
-			Вы решили не трогать эту вещь. Возможно она наложит на вас проклятие?
+				You probably want to keep this chain.
+		- Close the chest.
+			You decided not to touch this thing. Maybe it will put a curse on you?
 	else:
-		В этом сундуке больше ничего нет.
+		There is nothing else in this chest.
 else:
-	Кажется, этот призрак охраняет этот сундук. Попробуйте с ним поговорить.
+	It seems that this [wave amp=15 freq=5]ghost[/wave] is guarding this chest. Try to talk to him.
 
 set dialogue_is_going = false
 

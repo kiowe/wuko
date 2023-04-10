@@ -1,0 +1,176 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_18kvw"]
+
+[resource]
+script = ExtResource("1_18kvw")
+titles = {
+"skull": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "skull",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "17",
+"parent_id": "7",
+"text": "He's got a lot of strength.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "He's got a lot of strength.",
+"type": "dialogue"
+},
+"11": {
+"next_id": "12",
+"next_id_after": "17",
+"parent_id": "5",
+"text": "Leave it alone.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Leave it alone.",
+"type": "response"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"parent_id": "11",
+"text": "You decided not to touch the skull.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You decided not to touch the skull.",
+"type": "dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "17",
+"parent_id": "11",
+"text": "Your experience in Dark Souls does not allow you to make the same mistake.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your experience in Dark Souls does not allow you to make the same mistake.",
+"type": "dialogue"
+},
+"14": {
+"next_conditional_id": "17",
+"next_id": "15",
+"next_id_after": "17",
+"type": "condition"
+},
+"15": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "17",
+"parent_id": "14",
+"text": "On the ground lies someone's broken skull. It looks... broken.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "On the ground lies someone's broken skull. It looks... broken.",
+"type": "dialogue"
+},
+"17": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_id": "19",
+"type": "mutation"
+},
+"19": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "dialogue_is_going"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"5": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "skull_touched"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}])
+},
+"next_conditional_id": "14",
+"next_id": "6",
+"next_id_after": "17",
+"type": "condition"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"parent_id": "5",
+"text": "There is someone's skull on the ground. It looks very old.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There is someone's skull on the ground. It looks very old.",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "17",
+"parent_id": "5",
+"responses": PackedStringArray("7", "11"),
+"text": "Touch it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Touch it.",
+"type": "response"
+},
+"8": {
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "skull_touched"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "9",
+"parent_id": "7",
+"type": "mutation"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "10",
+"parent_id": "7",
+"text": "As soon as Wuko's hand reached his skull, it immediately broke.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "As soon as Wuko's hand reached his skull, it immediately broke.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.14.1"

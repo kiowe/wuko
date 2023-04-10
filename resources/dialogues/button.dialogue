@@ -3,23 +3,23 @@
 set dialogue_is_going = true
 
 if button_pressed == false:
-	Здесь какая-то кнопка на стене.
-	- Нажать!
+	There's a button on the wall.
+	- Press!
 		set button_pressed = true
-		Вокруг резко стемнело. Теперь ваши глаза в безопасности.
-	- Не надо.
-		Вы решили остаться на светлой стороне.
-		Вы смотрите на камень в далеке от вас.
-		Силой мысли вы его поднять так и не смогли.
+		It's suddenly dark around you. Your eyes are safe now.
+	- Don't.
+		You decided to stay on the light side.
+		You are looking at a rock far away from you.
+		You couldn't get it up with your mind.
 else:
-	Кнопка.
-	- Нажать!
+	Button.
+	- Press!
 		set button_pressed = false
-		Вокруг резко посветлело. Оденьте солнцезащитные очки.
-	- Нет.
-		Вы решили остаться на тёмной стороне.
-		Вы ждёте.
-		Печенек по прежнему нет.
+		It's brightened up around you. Put on your sunglasses.
+	- No.
+		You decided to stay on the dark side.
+		You're waiting.
+		Still no cookies.
 
 set dialogue_is_going = false
 

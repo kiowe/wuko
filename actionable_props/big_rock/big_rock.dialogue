@@ -3,30 +3,30 @@
 set dialogue_is_going = true
 
 if otodvigator == false and buy_a_item == false:
-	Вы находите записку: "Огромный камень стоит на вашем пути? Ответьте на вопрос нажав на кнопку!"
-	- Да.
-		Вы нажимаете на нарисованную кнопку "Да".
+	You find a note: "Is a huge rock standing in your way? Answer the question by pressing the button!"
+	- Yes.
+		You click on the drawn "Yes" button.
 		set buy_a_item = true
-		"Тогда приобретите ОТОДВИГАТОР3128 за смешную цену у призрака-незнакомца!"
-		"Скидка 90%! Только сегодня, может быть вчера, а может быть ещё и завтра!"
-		Вы решили выкинуть бумажку, пока на ней появлялся текст с рекламным содержанием.
-	- Нет.
-		"Ох, вот оно как. Много вероятно что вы умеете ходить..."
-		"Верните пожалуйста записку на место, вдруг появятся покупатели."
-		Вы возвращайте записку на место.
-		Как только вы это сделали, на записке вновь появилось то же сообщение.
+		"Then purchase OTODVIGATOR3128 for a ridiculous price from a ghostly stranger!"
+		"90% off! Just today, maybe yesterday, maybe even tomorrow!"
+		You decided to throw away the paper while the text with advertising content was appearing on it.
+	- No.
+		"Oh, that's how it is. It's very likely that you can walk..."
+		"Please put the note back, in case any buyers show up."
+		You put the note back where it was.
+		As soon as you did, the same message appeared on the note again.
 elif otodvigator == true and otodv_used == false:
 	set otodv_used = true
-	Вы держите это чудо техники в руках и пытайтесь использовать его на этом камне.
-	Вы понятия не имеете как это использовать.
-	Во всех своих бедах вы обвиняете призрака.
+	You hold this marvel of technology in your hands and try to use it on this rock.
+	You have no idea how to use it.
+	You blame all your troubles on a ghost.
 elif otodvigator == true and otodv_used == true:
-	Камень с места так и не сдвинулся.
+	The rock never moved.
 else:
-	Нужно сходить к тому призраку около сундука.
-	Может ОТОДВИГАТОР3128 справится с этой проблемой.
-	Ты ведь не можешь просто обойти этот камень.
-	Его обязательно нужно отодвинуть.
+	You have to go to that ghost by the chest.
+	Maybe OTODVIGATOR3128 can solve this problem.
+	You can't just go around that rock.
+	It definitely needs to be pushed back.
 
 set dialogue_is_going = false
 

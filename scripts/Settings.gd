@@ -27,4 +27,5 @@ func _on_music_vol_slider_value_changed(value):
 func _on_sfx_vol_slider_value_changed(value):
 	GlobalSettings.update_sfx_vol(value)
 
-
+func _on_langage_button_pressed():
+	pass
